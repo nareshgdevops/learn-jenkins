@@ -8,4 +8,11 @@ pipeline {
             }
         }
     }
+
+
+    post {
+        always {
+            echo "Run Always"
+        }
+    }
 }
