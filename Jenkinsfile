@@ -1,10 +1,16 @@
 pipeline {
     agent any
 
+    environment {
+        CC = 'clang'
+        jenkins_password = credentials('agent-ssh-key')
+    }
+
     stages {
         stage('Stage1') {
             steps {
-                echo "First Stage"
+                sh 'First Stage'
+                sh 'echo "Jenkins user name is $jenkins_password"'
             }
         }
     }
