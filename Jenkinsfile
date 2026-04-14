@@ -11,7 +11,8 @@ pipeline {
             steps {
                 echo 'First Stage'
                 sh 'echo message'
-                echo "Jenkins password ${jenkins_password}"
+                echo "Jenkins password ${jenkins_password_USR}"
+                echo "Jenkins password ${jenkins_password_PSW}"
             }
         }
     }
