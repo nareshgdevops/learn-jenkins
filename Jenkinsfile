@@ -50,8 +50,8 @@ pipeline {
 
         stage('Stage for conditions') {
                 when {
+                    branch 'main'
                     allOf {
-                       // branch 'main'
                         environment name: 'DEPLOY_TO', value: 'production'
                     }
                 }
