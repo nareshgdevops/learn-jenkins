@@ -49,7 +49,7 @@ pipeline {
 
         stage('Stage for conditions') {
                 when {
-                    branch 'test'
+                    branch 'main'
                 }
 
                 steps {
