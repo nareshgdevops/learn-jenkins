@@ -17,6 +17,7 @@ pipeline {
     }
     environment {
         CC = 'clang'
+        DEPLOY_TO = 'production'
         jenkins_password = credentials('agent-ssh-key')
     }
 
@@ -49,7 +50,10 @@ pipeline {
 
         stage('Stage for conditions') {
                 when {
-                    branch 'main'
+                    allOf {
+                        branch 'main'
+                        environment name: 'DEPLOY_TO', value: 'test'
+                    }
                 }
 
                 steps {
