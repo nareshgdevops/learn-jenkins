@@ -52,7 +52,7 @@ pipeline {
                 when {
                     allOf {
                         branch 'main'
-                        environment name: 'DEPLOY_TO', value: 'test'
+                        environment name: 'DEPLOY_TO', value: 'production'
                     }
                 }
 
