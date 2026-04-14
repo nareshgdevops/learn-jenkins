@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('Stage1') {
             steps {
-                sh 'First Stage'
-                sh 'echo "Jenkins user name is $jenkins_password"'
+                echo 'First Stage'
+                echo 'Jenkins password $jenkins_password'
             }
         }
     }
