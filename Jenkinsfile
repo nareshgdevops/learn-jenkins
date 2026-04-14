@@ -46,6 +46,16 @@ pipeline {
                     echo "Hello, ${PERSON}, nice to meet you."
                 }
         }
+
+        stage('Stage for conditions') {
+                when {
+                    branch 'test'
+                }
+
+                steps {
+                    echo "Condition is met"
+                }
+        }
     }
 
     post {
