@@ -29,7 +29,7 @@ pipeline {
                 echo "Jenkins password ${jenkins_password_PSW}"
                 echo "Parameter String is ${params.PERSON}"
 //                echo "Parameter description is ${params.description}"
-                echo "Parameter choice is ${Env.CHOICE}"
+                echo "Parameter choice is ${params.CHOICE}"
             }
         }
     }
