@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    options {
+       buildDiscarder(logRotator(numToKeepStr: '3')) }
+    }
 
     environment {
         CC = 'clang'
@@ -11,12 +14,11 @@ pipeline {
             steps {
                 echo 'First Stage'
                 sh 'echo message'
-                echo "Jenkins password ${jenkins_password_USR}"
+                echo "Jenkins username ${jenkins_password_USR}"
                 echo "Jenkins password ${jenkins_password_PSW}"
             }
         }
     }
-
 
     post {
         always {
